@@ -1,0 +1,265 @@
+{
+  "REQUEST_SUCCESS": {
+    "statusCode": 200,
+    "body": {
+      "title": "Success",
+      "code": 200000,
+      "href": "www.cogniyon.com.au/api/response/RequestSuccess"
+    }
+  },
+
+  "NO_HEADERS": {
+    "statusCode": 400,
+    "body": {
+      "code": 400000,
+      "title": "Bad Request",
+      "message": "No headers provided",
+      "name": "NoHeaders",
+      "detail": "Headers are not provided. Please provide required headers.",
+      "href": "www.cogniyon.com.au/api/response/NoHeaders",
+      "type": "inputError"
+    }
+  },
+  "NO_CORRELATION_ID": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "No x-correlation-id header provided",
+      "code": 400100,
+      "name": "NoCorrelationId",
+      "detail": "CorrelationId is not provided in x-correlation-id header. Correlation id should be provided in the x-correlation-id header.",
+      "href": "www.cogniyon.com.au/api/response/NoCorrelationId",
+      "type": "inputError"
+    }
+  },
+  "NO_APP_OS": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "No x-app-os header provided",
+      "code": 400101,
+      "name": "NoAppOs",
+      "detail": "OS is not provided in the x-app-os header. OS of the device should be given in x-app-os header.",
+      "href": "www.cogniyon.com.au/api/response/NoAppOs",
+      "type": "inputError"
+    }
+  },
+  "INVALID_APP_OS": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "Header: X-App-OS can only have one of these values: ios, android",
+      "code": 400102,
+      "name": "InvalidAppOs",
+      "detail": "OS should be either android or ios. Currently we aren't supporting other operating systems",
+      "href": "www.cogniyon.com.au/api/response/InvalidAppOs",
+      "type": "inputError"
+    }
+  },
+  "NO_APP_VERSION": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "No x-app-version header provided",
+      "code": 400103,
+      "name": "NoAppVersion",
+      "detail": "x-app-version header not found. Provide app version in x-app-version header",
+      "href": "www.cogniyon.com.au/api/response/NoAppVersion",
+      "type": "inputError"
+    }
+  },
+  "NO_APP_NAME": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "No x-app-name header provided",
+      "code": 400104,
+      "name": "NoAppName",
+      "detail": "App name is not provided in x-app-name header. App name should be provided in x-app-name header",
+      "href": "www.cogniyon.com.au/api/response/NoAppName",
+      "type": "inputError"
+    }
+  },
+  "INVALID_APP_NAME": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "Header: X-App-Name must be TalkSite",
+      "code": 400105,
+      "name": "InvalidAppName",
+      "detail": "App name should be TalkSite. No other names are accepted",
+      "href": "www.cogniyon.com.au/api/response/InvalidAppName",
+      "type": "inputError"
+    }
+  },
+  "NO_APP_COUNTRY": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "No x-app-country header provided",
+      "code": 400106,
+      "name": "NoAppCountry",
+      "detail": "Country is not given in x-app-country header. Country should be provided in x-app-country header.",
+      "href": "www.cogniyon.com.au/api/response/NoAppCountry",
+      "type": "inputError"
+    }
+  },
+  "INVALID_APP_COUNTRY": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "Header: X-App-Country must be au",
+      "code": 400107,
+      "name": "InvalidAppCountry",
+      "detail": "Available countries: au. Other countries will be available soon",
+      "href": "www.cogniyon.com.au/api/response/InvalidAppCountry",
+      "type": "inputError"
+    }
+  },
+  "NO_DEVICE_ID": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "No x-device-id header provided",
+      "code": 400108,
+      "name": "NoDeviceId",
+      "detail": "Device Id is not provided in x-device-id header. Device Id should be provided in x-device-id header",
+      "href": "www.cogniyon.com.au/api/response/NoDeviceId",
+      "type": "inputError"
+    }
+  },
+  "NO_CLIENT_ID": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "No x-client-id provided",
+      "code": 400109,
+      "name": "NoClientId",
+      "detail": "Client Id is not provided in x-client-id header. Client Id should be provided in x-client-id header",
+      "href": "www.cogniyon.com.au/api/response/NoClientId",
+      "type": "inputError"
+    }
+  },
+  "NO_CLIENT_SECRET": {
+    "statusCode": 400,
+    "body": {
+      "title": "Bad Request",
+      "message": "No x-client-secret provided",
+      "code": 400110,
+      "name": "NoClientSecret",
+      "detail": "No x-client-secret header is provided. All the client-secrets should be provided in x-client-secret header",
+      "href": "www.cogniyon.com.au/api/response/NoClientSecret",
+      "type": "inputError"
+    }
+  },
+  "NO_AUTHORIZATION": {
+    "statusCode": 401,
+    "body": {
+      "title": "Not Authorized",
+      "message": "No authorization provided",
+      "code": 401100,
+      "name": "NoAuthorization",
+      "detail": "No authorization header is provided headers. Authorization header should be given in headers",
+      "href": "www.cogniyon.com.au/api/response/NoAuthorization",
+      "type": "inputError"
+    }
+  },
+
+  "NO_SERVICE_ID": {
+    "statusCode": 400,
+    "body": {
+      "code": 400537,
+      "title": "Bad Request",
+      "message": "service id not provided in the input",
+      "name": "NoServiceId",
+      "detail": "No service id provided in the input. Please enter the service id. It may be null or not at all provided",
+      "href": "www.cogniyon.com.au/api/response/NoServiceId",
+      "type": "inputError"
+    }
+  },
+
+  "NO_SERVICES_FOUND": {
+    "statusCode": 400,
+    "body": {
+      "code": 400559,
+      "title": "Bad Request",
+      "message": "No services found for the given input",
+      "name": "NoServicesFound",
+      "detail": "There is no services available for the name you've provided. Please verify the service name you've provided. Or else try again after sometines",
+      "href": "www.cogniyon.com.au/api/response/NoServicesFound",
+      "type": "inputError"
+    }
+  },
+  "NOT_FOUND": {
+    "statusCode": 404,
+    "body": {
+      "title": "Non Found",
+      "message": "Resource not found",
+      "code":404100,
+      "name": "NotFound",
+      "detail": "No data found for the given input. Please check your input",
+      "href": "www.cogniyon.com.au/api/response/NotFound",
+      "type": "inputError"
+    }
+  },  "EMPTY_INPUT": {
+    "statusCode": 400,
+    "body": {
+      "code": 400561,
+      "title": "Bad Request",
+      "message": "Empty input provided",
+      "name": "EmptyInputAttribute",
+      "detail": "Input provided contains empty value for one or more attributes. Please give proper input",
+      "href": "www.cogniyon.com.au/api/response/EmptyInputAttribute",
+      "type": "inputError"
+    }
+  },
+  "INVALID_REQUEST_BODY": {
+    "statusCode": 400,
+    "body": {
+      "code": 400560,
+      "title": "Bad Request",
+      "message": "Invalid input provided",
+      "name": "InvalidRequestBody",
+      "detail": "Input provided is invalid. At any time any one of the {service, resource, operation} or {ids} input should be provided. If you try to provide both, it is invalid. \n Also when giving {service, resource, operation}, you should follow the order i.e., if you try to give resource without giving service, It's also invalid input.\n So try to give proper inputs",
+      "href": "www.cogniyon.com.au/api/response/InvalidRequestBody",
+      "type": "inputError"
+    }
+  },
+  "NO_BODY": {
+    "statusCode": 400,
+    "body": {
+      "code": 400500,
+      "title": "Bad Request",
+      "message": "No body provided",
+      "name": "NoBody",
+      "detail": "Body is not provided. Enter the required data in the input fields",
+      "href": "www.cogniyon.com.au/api/response/NoBody",
+      "type": "inputError"
+    }
+  },
+
+  "INTERNAL_SERVER_ERROR": {
+    "statusCode": 500,
+    "body": {
+      "title": "Internal server error",
+      "message": "Error happened on server side",
+      "code": 500000,
+      "name": "InternalServerError",
+      "detail": "Error happened in server while processing request",
+      "href": "www.cogniyon.com.au/api/response/InternalServerError",
+      "type": "serverError"
+    }
+  },
+  "DATABASE_ERROR": {
+    "statusCode": 500,
+    "body": {
+      "title": "Internal server error",
+      "message": "Error happened in database",
+      "code": 500002,
+      "name": "DatabaseError",
+      "detail": "Error happened in the database. It may be due to database unable to process the request.",
+      "href": "www.cogniyon.com.au/api/response/DatabaseError",
+      "type": "DatabaseError"
+    }
+  }
+}

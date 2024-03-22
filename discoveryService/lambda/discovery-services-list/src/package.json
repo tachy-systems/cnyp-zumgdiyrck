@@ -1,0 +1,23 @@
+{
+  "name": "mfc-init",
+  "version": "1.0.0",
+  "description": "Microfrontend components list api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mfe",
+    "list"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.245.0",
+    "@aws-sdk/lib-dynamodb": "^3.245.0",
+  "aws-xray-sdk-core": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}

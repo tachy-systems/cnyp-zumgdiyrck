@@ -1,0 +1,72 @@
+{
+  "cnyp-discovery-service-cdk-stack": {
+    "cnyp-discovery-service-api-gateway": {
+      "separateHostedZones": false,
+      "ssmKeys": {},
+      "proxy": {},
+      "fileLocation": "Local",
+      "account": "19829352",
+      "region": "ap-southeast-2",
+      "schemaFileBasePath": "",
+      "responseFileBasePath": "",
+      "outputType": "Json",
+      "schemas": {},
+      "stage": "dev",
+      "serverUrl": "aws",
+      "resources": {},
+      "features": {
+        "Authorization": {
+          "path": "../ts-common-authorizer/src",
+          "env": {}
+        },
+        "DiscoveryService": {
+          "key": "cnyp"
+        }
+      },
+      "endpointsInfoArray": [
+        {
+          "projectName": "cogniyonPlatform",
+          "projectShortName": "cnyp",
+          "resourceName": "discovery",
+          "path": "/services",
+          "pathPrefix": "",
+          "httpMethod": "GET",
+          "featuresRef": [
+            "Authentication",
+            "ErrorHandler"
+          ],
+          "serviceMethodName": "cnyp-discovery-services-list",
+          "serviceId": "cnyp-discovery-services-list",
+          "permissions": [
+            {
+              "type": "AwsDynamoDB",
+              "name": "discovery-services",
+              "access": "READ"
+            }
+          ]
+        },
+        {
+          "projectName": "cogniyonPlatform",
+          "projectShortName": "cnyp",
+          "resourceName": "discovery",
+          "path": "/services/{serviceId}",
+          "httpMethod": "GET",
+          "pathPrefix": "",
+          "featuresRef": [
+            "Authentication",
+            "ErrorHandler"
+          ],
+          "serviceMethodName": "cnyp-discovery-services-read",
+          "serviceId": "cnyp-discovery-services-read",
+          "permissions": [
+            {
+              "type": "AwsDynamoDB",
+              "name": "discovery-services",
+              "access": "READ"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

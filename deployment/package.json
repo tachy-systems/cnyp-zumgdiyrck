@@ -1,0 +1,32 @@
+{
+  "name": "deployment",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "npm install --legacy-peer-deps && npm run copy && npm-run-all build  deploy output",
+    "build": "tsc",
+    "copy": "cp ../1_InputTransformer/outputs/* ./inputs/ -r",
+    "copy-outputs": "cp ./outputs/* ../scripts/ -r",
+    "clean": "rm -rf *.js && rm -rf *d.ts && rm -rf node_modules && && rm -rf cdk.out",
+    "watch": "tsc -w",
+    "test": "jest",
+    "boot": "cdk bootstrap",
+    "destroy": "cdk destroy",
+    "deploy": "cdk deploy --all --require-approval never",
+    "output": "npx ts-node --prefer-ts-exts src/outputFileGenerator.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^10.17.60",
+    "@types/prettier": "2.6.0",
+    "esbuild": "^0.17.4",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudformation": "^3.537.0",
+    "aws-cdk-lib": "^2.30.0",
+    "constructs": "^10.0.0",
+    "npm-run-all": "^4.1.5",
+    "source-map-support": "^0.5.21"
+  }
+}
